@@ -5,7 +5,7 @@ using UnityEngine;
 using Newtonsoft.Json;
 
 #if UNITY_WEBGL
-public class WebGLWinnerWithdrawal : MonoBehaviour
+public class WebGLLooserWithdrawal : MonoBehaviour
 {
     [SerializeField]
     private string contract = "0xd75F5371Da7BD82fC228C5735cDf96d8361c629B";
@@ -17,7 +17,7 @@ public class WebGLWinnerWithdrawal : MonoBehaviour
     async public void withdrawalLooser()
     {
         // smart contract method to call
-        string method = "withdrawalWinner";
+        string method = "withdrawalSecond";
         // array of arguments for contract
         string[] obj = { _amount };
         string args = JsonConvert.SerializeObject(obj);

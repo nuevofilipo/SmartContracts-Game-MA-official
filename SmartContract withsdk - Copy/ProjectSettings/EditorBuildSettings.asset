@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PickWinnerScene.unity
     guid: 90f1ba6aba695484c8d3df27210eb8b6
+  - enabled: 1
+    path: Assets/Scenes/Looserwithdraw.unity
+    guid: 59cd398d4f1ff8b49867da66b0982796
   m_configObjects: {}
