@@ -10,25 +10,20 @@ public class IfDeposited : MonoBehaviour
 
     public Text tokenBalance;
     public int resultBalance;
-    async void Start()
+    void Start()
+    {
+
+    }
+    // Update is called once per frame
+    async void Update()
     {
         string chain = "binance";
         string network = "testnet";
         string contract = "0xBB7DFc1aBbd94d53648e9DF1F7584B898b1D57C2";
         string account = PlayerPrefs.GetString("Account");
-
         BigInteger balanceOf = await ERC20.BalanceOf(chain, network, contract, account);
         int resultBalance = (int)balanceOf;
         print(resultBalance);
         tokenBalance.text = balanceOf.ToString();
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        if (resultBalance > 5000)
-        {
-            _enterButton.SetActive(true);
-        }
-
     }
 }

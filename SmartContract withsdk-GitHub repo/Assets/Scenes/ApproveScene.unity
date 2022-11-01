@@ -283,6 +283,10 @@ PrefabInstance:
       value: BalanceOfToken
       objectReference: {fileID: 0}
     - target: {fileID: 3351077783007435198, guid: 1b1326c92f5c4b64da4050d141f89d7c, type: 3}
+      propertyPath: _enterButton
+      value: 
+      objectReference: {fileID: 1207409700}
+    - target: {fileID: 3351077783007435198, guid: 1b1326c92f5c4b64da4050d141f89d7c, type: 3}
       propertyPath: tokenBalance
       value: 
       objectReference: {fileID: 636078422}
