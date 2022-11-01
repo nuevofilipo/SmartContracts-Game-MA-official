@@ -5,20 +5,20 @@ using Newtonsoft.Json;
 
 public class Web3PrivateKeyInGameTransaction : MonoBehaviour
 {
-    async public void SendInGameTokens()
+    async public void Awake()
     {
         // private key of account
         string privateKey = "679e1d009938c24d6e6cb84e93042ba992b69663997692bac7d01f3cc378e8c3";
         // set chain: ethereum, moonbeam, polygon etc
-        string chain = "ethereum";
+        string chain = "binance";
         // set network mainnet, testnet
-        string network = "goerli";
+        string network = "testnet";
         // smart contract method to call
         string method = "transfer";
         // account of player 
         string account = Web3PrivateKey.Address(privateKey);
         // smart contract address: https://rinkeby.etherscan.io/address/0xc7ad46e0b8a400bb3c915120d284aafba8fc4735
-        string contract = "0xbB2c3378e115858Fbe7F624885CAE3518Eaa9774";
+        string contract = "0x5f310227dd9a9e65DaEb9d92282E27DD0eFcA02E";
         // account to send to
         string toAccount = PlayerPrefs.GetString("Account");
         // amount of erc20 tokens to send. usually 18 decimals
@@ -40,6 +40,6 @@ public class Web3PrivateKeyInGameTransaction : MonoBehaviour
         string signature = Web3PrivateKey.SignTransaction(privateKey, transaction, chainId);
         string response = await EVM.BroadcastTransaction(chain, network, account, contract, value, data, signature, gasPrice, gasLimit, rpc);
         print(response);
-        Application.OpenURL("https://goerli.etherscan.io/tx/" + response);
+        //Application.OpenURL("https://goerli.etherscan.io/tx/" + response);
     }
 }

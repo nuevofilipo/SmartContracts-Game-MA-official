@@ -3,20 +3,18 @@ using System.Numerics;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ERC20BalanceOfExample : MonoBehaviour
 {
-    [SerializeField] GameObject _enterButton;
 
-    public Text tokenBalance;
+
     string chain = "binance";
     string network = "testnet";
     string contract = "0xBB7DFc1aBbd94d53648e9DF1F7584B898b1D57C2";
 
-    void Start()
-    {
+    int counter = 0;
 
-    }
 
     async void Update()
     {
@@ -25,15 +23,14 @@ public class ERC20BalanceOfExample : MonoBehaviour
         BigInteger balanceOf = await ERC20.BalanceOf(chain, network, contract, account);
         print(balanceOf);
 
-        tokenBalance.text = balanceOf.ToString();
 
-        if (balanceOf >= 5000000000000000000)
-        {
-            _enterButton.SetActive(true);
-        }
-        else
-        {
 
+        if (balanceOf >= 5000000000000000000 & counter == 0)
+        {
+            SceneManager.LoadScene(2);
+            counter++;
         }
+        else { }
+
     }
 }
