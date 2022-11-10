@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 476.9, y: -269.5}
-  m_SizeDelta: {x: 750.5, y: 249.9}
+  m_AnchoredPosition: {x: 476.9, y: -259.72}
+  m_SizeDelta: {x: 766.89, y: 249.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &41757716
 MonoBehaviour:
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -181,8 +181,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
+    m_Font: {fileID: 12800000, guid: 348970a46307921479385a9c161d033b, type: 3}
+    m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -193,10 +193,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'With this button you deploy 5 BUSD into our contract
+  m_Text: 'With this button you deposit 5 BUSD into our contract
 
     Once your funds
-    arrive, the EnterGame button will appear'
+    arrive you will be brought into the lobby'
 --- !u!222 &41757717
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -334,13 +334,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3351077783007435198, guid: 1b1326c92f5c4b64da4050d141f89d7c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1b1326c92f5c4b64da4050d141f89d7c, type: 3}
 --- !u!4 &91605410 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3351077783007435199, guid: 1b1326c92f5c4b64da4050d141f89d7c, type: 3}
   m_PrefabInstance: {fileID: 91605409}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &91605411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3351077783007435197, guid: 1b1326c92f5c4b64da4050d141f89d7c, type: 3}
+  m_PrefabInstance: {fileID: 91605409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &91605412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91605411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536af8035fd8e3340a2b64b001f4f952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enterButton: {fileID: 1207409700}
 --- !u!1 &205950347
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,10 +408,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -454,7 +473,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4438989808334186600, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
       propertyPath: m_Text
-      value: Deposit20
+      value: Enter Game
       objectReference: {fileID: 0}
     - target: {fileID: 4438989808334186600, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
       propertyPath: m_Color.b
@@ -469,16 +488,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4438989808334186600, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 18bd03afcb78da741900d7bade136615, type: 3}
+    - target: {fileID: 4438989808334186600, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 4438989808334186600, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 37
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 4438989808334186600, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
       propertyPath: m_FontData.m_FontStyle
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6007004676961969754, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
       propertyPath: m_SizeDelta.x
@@ -497,6 +520,10 @@ PrefabInstance:
       value: -46.25
       objectReference: {fileID: 0}
     - target: {fileID: 7076908300572970131, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076908300572970131, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
       propertyPath: m_Color.a
       value: 0.94509804
       objectReference: {fileID: 0}
@@ -510,6 +537,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7076908300572970131, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
       propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076908300572970131, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076908300572970131, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
+      propertyPath: m_FillCenter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076908300572970131, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
+      propertyPath: m_FillMethod
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076908300572970131, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
+      propertyPath: m_FillOrigin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076908300572970131, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076908300572970131, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
+      propertyPath: m_PreserveAspect
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7268806000430509714, guid: 7d3178f0d7a59d74f937a622ad0c8e04, type: 3}
@@ -1130,7 +1181,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -372, y: -203.1}
+  m_AnchoredPosition: {x: -372, y: -200.8}
   m_SizeDelta: {x: 800, y: 129.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1256284862
@@ -1146,7 +1197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1154,8 +1205,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
+    m_Font: {fileID: 12800000, guid: 348970a46307921479385a9c161d033b, type: 3}
+    m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1494,27 +1545,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2217571029899179544, guid: 44e79bb931ded6849b6d08ee972d977d, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2217571029899179544, guid: 44e79bb931ded6849b6d08ee972d977d, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2217571029899179544, guid: 44e79bb931ded6849b6d08ee972d977d, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2217571029899179544, guid: 44e79bb931ded6849b6d08ee972d977d, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 18bd03afcb78da741900d7bade136615, type: 3}
     - target: {fileID: 2217571029899179544, guid: 44e79bb931ded6849b6d08ee972d977d, type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 87
       objectReference: {fileID: 0}
     - target: {fileID: 2217571029899179544, guid: 44e79bb931ded6849b6d08ee972d977d, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 37
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 2217571029899179544, guid: 44e79bb931ded6849b6d08ee972d977d, type: 3}
       propertyPath: m_FontData.m_FontStyle
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2217571029899179544, guid: 44e79bb931ded6849b6d08ee972d977d, type: 3}
       propertyPath: m_FontData.m_HorizontalOverflow
@@ -1534,11 +1589,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4713626374393991907, guid: 44e79bb931ded6849b6d08ee972d977d, type: 3}
       propertyPath: m_Color.g
-      value: 0.89436626
+      value: 0.3726415
       objectReference: {fileID: 0}
     - target: {fileID: 4713626374393991907, guid: 44e79bb931ded6849b6d08ee972d977d, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 0.44107306
       objectReference: {fileID: 0}
     - target: {fileID: 5045356599529208953, guid: 44e79bb931ded6849b6d08ee972d977d, type: 3}
       propertyPath: m_Pivot.x

@@ -5,14 +5,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ERC20BalanceOfExample : MonoBehaviour
+public class WaitForIGToken : MonoBehaviour
 {
-    [SerializeField] GameObject _withdrawButton;
 
+    [SerializeField] GameObject _withdrawbutton;
 
     string chain = "binance";
     string network = "testnet";
-    string contract = "0x5f310227dd9a9e65daeb9d92282e27dd0efca02e";
+    string contract = "0x5f310227dd9a9e65daeb9d92282e27dd0efca02e ";
 
     int counter = 0;
 
@@ -28,8 +28,7 @@ public class ERC20BalanceOfExample : MonoBehaviour
 
         if (balanceOf >= 5000000000000000000 & counter == 0)
         {
-
-            _withdrawButton.SetActive(true);
+            _withdrawbutton.SetActive(true);
             counter++;
         }
         else { }

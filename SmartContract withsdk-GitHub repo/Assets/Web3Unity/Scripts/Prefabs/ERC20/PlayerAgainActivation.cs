@@ -5,9 +5,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ERC20BalanceOfExample : MonoBehaviour
+public class PlayerAgainActivation : MonoBehaviour
 {
     [SerializeField] GameObject _withdrawButton;
+    [SerializeField] GameObject _playAgainButton;
 
 
     string chain = "binance";
@@ -26,10 +27,10 @@ public class ERC20BalanceOfExample : MonoBehaviour
 
 
 
-        if (balanceOf >= 5000000000000000000 & counter == 0)
+        if (balanceOf <= 5000 & counter == 0 & _withdrawButton.activeSelf)
         {
 
-            _withdrawButton.SetActive(true);
+            _playAgainButton.SetActive(true);
             counter++;
         }
         else { }

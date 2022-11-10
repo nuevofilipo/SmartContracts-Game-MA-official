@@ -6,15 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Scenes/WebLogin.unity
+    path: Assets/ContractScenes/Scenes/WebLogin.unity
     guid: a1b2001e782bb47659732d7e2bcdc35f
   - enabled: 1
-    path: Assets/Scenes/ApproveScene.unity
+    path: Assets/ContractScenes/ApproveScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
-    path: Assets/Scenes/DepositErc20Scene.unity
-    guid: a4ba3eb2a841e3b48975601fae0974b9
   - enabled: 1
-    path: Assets/Scenes/PickWinnerScene.unity
+    path: Assets/ContractScenes/PickWinnerScene.unity
     guid: 90f1ba6aba695484c8d3df27210eb8b6
   m_configObjects: {}
