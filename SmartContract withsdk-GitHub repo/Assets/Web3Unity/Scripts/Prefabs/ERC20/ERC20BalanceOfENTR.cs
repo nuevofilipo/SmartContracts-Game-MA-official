@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class ERC20BalanceOfENTR : MonoBehaviour
 {
-    [SerializeField] GameObject _enterButton;
+    //[SerializeField] GameObject _enterButton;
 
 
     string chain = "binance";
@@ -28,8 +28,8 @@ public class ERC20BalanceOfENTR : MonoBehaviour
 
         if (balanceOf >= 5000000000000000000 & counter == 0)
         {
-
-            _enterButton.SetActive(true);
+            SceneManager.LoadScene("PickWinnerScene");
+            //_enterButton.SetActive(true);
             counter++;
         }
         else { }

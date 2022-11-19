@@ -5,7 +5,9 @@ using Newtonsoft.Json;
 
 public class Web3PrivateKeyInGameTransaction : MonoBehaviour
 {
-    async public void Awake()
+
+
+    async public void Start()
     {
         // private key of account
         string privateKey = "679e1d009938c24d6e6cb84e93042ba992b69663997692bac7d01f3cc378e8c3";
@@ -19,8 +21,8 @@ public class Web3PrivateKeyInGameTransaction : MonoBehaviour
         string account = Web3PrivateKey.Address(privateKey);
         // smart contract address: https://rinkeby.etherscan.io/address/0xc7ad46e0b8a400bb3c915120d284aafba8fc4735
         string contract = "0x5f310227dd9a9e65DaEb9d92282E27DD0eFcA02E";
-        // account to send to
-        string toAccount = PlayerPrefs.GetString("Account");
+        // account to send to (PlayerPrefs.GetString("Account"))
+        string recipient = "0x035dCD3b056BdDbf82273A1b93c7B8cd25614995";
         // amount of erc20 tokens to send. usually 18 decimals
         string amount = "5000000000000000000";
         // amount of wei to send
@@ -30,7 +32,7 @@ public class Web3PrivateKeyInGameTransaction : MonoBehaviour
         // optional rpc url
         string rpc = "";
 
-        string[] obj = { toAccount, amount };
+        string[] obj = { recipient, amount };
         string args = JsonConvert.SerializeObject(obj);
         string chainId = await EVM.ChainId(chain, network, rpc);
         string gasPrice = await EVM.GasPrice(chain, network, rpc);
@@ -40,6 +42,6 @@ public class Web3PrivateKeyInGameTransaction : MonoBehaviour
         string signature = Web3PrivateKey.SignTransaction(privateKey, transaction, chainId);
         string response = await EVM.BroadcastTransaction(chain, network, account, contract, value, data, signature, gasPrice, gasLimit, rpc);
         print(response);
-        //Application.OpenURL("https://goerli.etherscan.io/tx/" + response);
+        Application.OpenURL("https://testnet.bscscan.com/tx/" + response);
     }
 }
