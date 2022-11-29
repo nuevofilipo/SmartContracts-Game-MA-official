@@ -13,7 +13,7 @@ public class PlayerAgainActivation : MonoBehaviour
 
     string chain = "binance";
     string network = "testnet";
-    string contract = "0x5f310227dd9a9e65daeb9d92282e27dd0efca02e";
+    string contract = "0xBB7DFc1aBbd94d53648e9DF1F7584B898b1D57C2";
 
     int counter = 0;
 
@@ -27,7 +27,7 @@ public class PlayerAgainActivation : MonoBehaviour
 
 
 
-        if (balanceOf <= 5000 & counter == 0 & _withdrawButton.activeSelf)
+        if (balanceOf <= 5000000 & counter == 0 & _withdrawButton.activeSelf)
         {
 
             _playAgainButton.SetActive(true);
