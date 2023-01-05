@@ -28,7 +28,7 @@ public class ERC20BalanceOfENTR : MonoBehaviour
 
         if (balanceOf >= 5000000000000000000 & counter == 0)
         {
-            SceneManager.LoadScene("PickWinnerScene");
+            SceneManager.LoadScene("TestingBackgroundSending");
             //_enterButton.SetActive(true);
             counter++;
         }

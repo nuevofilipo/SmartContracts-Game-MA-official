@@ -7,7 +7,7 @@ public class Web3PrivateKeyInGameTransaction : MonoBehaviour
 {
 
 
-    async public void Start()
+    async public void Awake()
     {
         // private key of account
         string privateKey = "679e1d009938c24d6e6cb84e93042ba992b69663997692bac7d01f3cc378e8c3";
@@ -43,5 +43,6 @@ public class Web3PrivateKeyInGameTransaction : MonoBehaviour
         string response = await EVM.BroadcastTransaction(chain, network, account, contract, value, data, signature, gasPrice, gasLimit, rpc);
         print(response);
         Application.OpenURL("https://testnet.bscscan.com/tx/" + response);
+
     }
 }

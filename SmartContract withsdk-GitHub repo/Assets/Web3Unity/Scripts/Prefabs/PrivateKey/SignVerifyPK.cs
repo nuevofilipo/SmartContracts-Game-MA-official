@@ -6,9 +6,9 @@ using UnityEngine;
 public class SignVerifyPK : MonoBehaviour
 {
     // Start is called before the first frame update
-    async public void TestSigning()
+    async void Start()
     {
-        var privateKey = "0b3e58026e8330d12a659a3e89aa7c5622d716ac67c42d93a7599276f9c26fa3";
+        var privateKey = "ADD_PRIVATE_KEY";
         string message = "hello";
         var hashedMessage = Web3Wallet.Sha3(message);
         Debug.Log("Hashed Message PK: " + hashedMessage);
@@ -19,7 +19,7 @@ public class SignVerifyPK : MonoBehaviour
         print("Account from PK: " + account);
         string address = await EVM.Verify(hashedMessage, signature);
         print("Address From Verify PK: " + address);
-
+        
         ParseSignatureFunction(signature);
     }
     // Update is called once per frame
