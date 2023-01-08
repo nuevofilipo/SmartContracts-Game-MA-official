@@ -9,6 +9,8 @@ Navigation:
 
 -> In the ERC-20-Code folder you will be able to locate the scripts used to create my ERC-20 tokens, that fullfill various functions in the game / smart contract
 
+-> You can also find two folders, each containing a WebGL build, one with the entire game, and one solely with the integrated Smart Contracts into unity
+
 
 
 ----------------------------------------------------------------------------------------------
