@@ -30,4 +30,6 @@ Vorbereitung: Ganzen Folder des WebGL builds auf den eigenen PC kopieren
 
 Nun sollte sich im Browser der WebGL build öffnen
 
-Um zu testen, kann man auf dem PC zusätzlichen den Windows build aufmachen. Diesen hat Tomas zur Verfügung gestellt. Es muss aber beachtet werden, dass der WebGL build, des ganzen Spieles hier auf GitHub, ohne Gebäude-Assets erstellt worden ist, weil diese zu viele GB gross waren
+Um zu testen, kann man auf dem PC zusätzlichen den Windows build aufmachen. Diesen hat Tomas zur Verfügung gestellt. Es muss aber beachtet werden, dass der WebGL build, des ganzen Spieles hier auf GitHub, ohne Gebäude-Assets erstellt worden ist, weil diese zu viele GB gross waren.
+
+Man kann auch um zu testen, den WebGL build zwei Mal localhosten. 
