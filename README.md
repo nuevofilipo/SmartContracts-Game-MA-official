@@ -27,5 +27,4 @@ Vorbereitung: Ganzen Folder des WebGL builds auf den eigenen PC kopieren
 
 Nun sollte sich im Browser der WebGL build öffnen
 
-Um zu testen, kann man auf dem PC zusätzlichen den Windows build aufmachen. Der sich im Folder "Windows build", befindet
-(Um den Windows build aufzumachen, muss man wieder den ganzen Folder auf den eigenen PC kopieren, und dann Ma.exe öffnen)
+Um zu testen, kann man auf dem PC zusätzlichen den Windows build aufmachen. Diesen hat Tomas zur Verfügung gestellt. Es muss aber beachtet werden, dass der WebGL build, des ganzen Spieles hier auf GitHub, ohne Gebäude-Assets erstellt worden ist, weil diese zu viele GB gross waren
